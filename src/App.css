@@ -1,4 +1,4 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -10,26 +10,24 @@ body {
   background: #f3f3f3;
 }
 
-/* MAIN CONTAINER */
+/* ================= MAIN CONTAINER ================= */
 .container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 
 /* ================= LEFT SECTION ================= */
-
 .left {
   width: 65%;
   background: #f3f3f3;
   padding: 50px 70px;
-  display: flex;
-  flex-direction: column;
 }
 
 /* LOGO */
 .header img {
   width: 260px;
+  max-width: 100%;
 }
 
 /* CONTENT */
@@ -40,7 +38,6 @@ body {
 
 .content h2 {
   font-size: 22px;
-  font-weight: 500;
   margin-bottom: 10px;
   color: #222;
 }
@@ -58,20 +55,18 @@ body {
   padding: 20px;
   border-radius: 6px;
   border-left: 5px solid #1f2757;
-  width: 100%;
   max-width: 600px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .notice h3 {
   font-size: 16px;
-  font-weight: 500;
   margin-bottom: 10px;
 }
 
 .notice textarea {
   width: 100%;
-  height: 80px; /* 🔥 fixed small height */
+  height: 80px;
   border: 1px solid #ddd;
   border-radius: 4px;
   resize: none;
@@ -81,20 +76,19 @@ body {
 }
 
 /* ================= RIGHT SECTION ================= */
-
 .right {
   width: 35%;
   background: #1f2757;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
 /* LOGIN CARD */
 .login-card {
-  width: 75%;
+  width: 100%;
   max-width: 350px;
-  background: transparent;
   color: #fff;
   padding: 30px;
   box-shadow: 0 0 20px rgba(0,0,0,0.25);
@@ -103,16 +97,15 @@ body {
 
 /* TITLE */
 .login-card h2 {
-  font-size: 20px;
-  font-weight: 500;
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 /* LABEL */
 .login-card label {
-  display: block;
   font-size: 13px;
   margin-top: 12px;
+  display: block;
 }
 
 /* INPUT */
@@ -121,11 +114,11 @@ body {
   padding: 10px;
   margin-top: 5px;
   border: none;
-  outline: none;
   border-radius: 3px;
+  outline: none;
 }
 
-/* DATE SELECT GROUP */
+/* DATE SELECT */
 .dob {
   display: flex;
   gap: 10px;
@@ -144,8 +137,8 @@ body {
 /* HELP TEXT */
 .help-text {
   font-size: 12px;
-  color: #d1d1d1;
   margin: 15px 0;
+  color: #ccc;
   line-height: 1.4;
 }
 
@@ -166,23 +159,84 @@ button:hover {
   background: #ccc;
 }
 
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 900px) {
-  .container {
-    flex-direction: column;
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  .left {
+    padding: 40px;
   }
 
-  .left, .right {
+  .content {
+    max-width: 100%;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* ✅ logo first, login below */
+  }
+
+  .left {
+    order: 1;
     width: 100%;
-    height: auto;
+    padding: 25px 15px;
+    text-align: center;
   }
 
   .right {
-    padding: 40px 0;
+    order: 2;
+    width: 100%;
+    padding: 25px 15px;
+  }
+
+  .header img {
+    width: 180px;
+    margin: auto;
+  }
+
+  .content {
+    margin-top: 15px;
+  }
+
+  .content h2 {
+    font-size: 18px;
+  }
+
+  .content p {
+    font-size: 13px;
+  }
+
+  .notice {
+    margin: 20px auto;
+    width: 100%;
   }
 
   .login-card {
-    width: 90%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+    float: none;
+  }
+
+  .dob {
+    flex-direction: column;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 15px;
+  }
+
+  .content h2 {
+    font-size: 16px;
+  }
+
+  .content p {
+    font-size: 12px;
   }
 }
