@@ -1,14 +1,17 @@
-import React from "react";
-import LeftSection from "./components/leftSection";
-import LoginForm from "./components/loginForm";
-import "./App.css";
-const App = () => {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import VerifyPage from "./pages/VerifyPage";
+import DashboardPage from "./pages/DashboardPage";
+function App() {
   return (
-    <div className="container">
-      <LeftSection />
-      <LoginForm />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/verify" element={<VerifyPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+      </Routes>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
