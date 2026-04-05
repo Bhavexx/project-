@@ -4,16 +4,7 @@ function LeftSection() {
   return (
     <div className="left">
       <div className="header">
-        <img
-          src={logo}
-          alt="logo"
-          style={{
-            width: "120px",
-            height: "auto",
-            mixBlendMode: "multiply",
-            backgroundColor: "transparent",
-          }}
-        />
+        <img src={logo} alt="logo" />
       </div>
 
       <div className="content">
@@ -21,8 +12,7 @@ function LeftSection() {
         <p>
           The New Horizon College of Engineering is an autonomous private
           engineering college located near Marathahalli, in Bangalore, India.
-          Established in 2001, the college is part of the New Horizon
-          Educational Institution which was established in 1970.
+          Established in 2001...
         </p>
 
         <div className="notice">
