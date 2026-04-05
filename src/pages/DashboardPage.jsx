@@ -1,4 +1,5 @@
-
+import React from "react";
+import logo from "../assets/freelancer project ss.png";
 
 function DashboardPage() {
   const courses = [
@@ -18,7 +19,7 @@ function DashboardPage() {
     <div className="dashboard">
       {/* 🔵 TOP NAVBAR */}
       <div className="topbar">
-        <img src="/logo.png" alt="logo" className="logo" />
+        <img src={logo} alt="logo" className="logo" />
 
         <div className="menu">
           <span>HOME</span>
@@ -38,7 +39,7 @@ function DashboardPage() {
         </div>
 
         <div className="profile-img">
-          <img src="/profile.jpg" alt="profile" />
+          <img src="https://via.placeholder.com/150" alt="profile" />
         </div>
 
         <div className="profile-right">
